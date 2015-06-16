@@ -1,0 +1,244 @@
+/* 
+ *  _litestrap 
+ *
+ * Utility Classes to control site width, columns, floats, clears, and fixes
+ *
+ */
+
+/* ok this isn't a class, but it's good */
+
+img { max-width: 100%; }
+
+/* here are the classes... */
+.site-wrapper { width: 100%; overflow: hidden; }
+.content-wrap { margin: 0 auto; position: relative; }
+
+.text-center, .text-mid { text-align: center; }
+.text-left { text-align: left; }
+.text-right { text-align: right; }
+
+/* .r- rules */
+.r-block { display: block; }
+.r-inline { display: inline; }
+.r-inline-block, .r-iblock { display: inline-block; }
+
+/* vertical alignment for inline-block and table elements */
+.r-valign--top { vertical-align: top; }
+.r-valign--mid { vertical-align: middle; }
+.r-valign--bottom { vertical-align: bottom; }
+
+/* border-box sizing */
+.r-border-box { 
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.r-content-box, .r-grid-pad {
+    /* for when you *intentionally* want to break the grid with padding */
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    -ms-box-sizing: content-box;
+    -o-box-sizing: content-box;
+    box-sizing: content-box;
+}
+
+/* grid sizes */
+.whole, .half, .third, .twothird, .twothirds, .quarter, .threequarter, .threequarters, .sixth, .eighth, .ninety, .eighty, .seventy, .sixty, .fifty, .forty, .thirty, .twenty, .ten {    
+    float: left;
+    position: relative; 
+    /* Just in case someone tries to get cute and add padding to grid elements... */
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.whole			{ width: 100%; }
+.half, .fifty 
+				{ width: 50%; }
+.third			{ width: 33.3%; }
+.twothird, .twothirds     
+				{ width: 66.6%; }
+.quarter		{ width: 25%; }
+.threequarter, .threequarters 
+				{ width: 75%; }
+.sixth			{ width: 16.6%; }
+.eighth			{ width: 12.5%; }
+
+.ninety			{ width: 90%; }
+.eighty			{ width: 80%; }
+.seventy		{ width: 70%; }
+.sixty			{ width: 60%; }
+.forty			{ width: 40%; }
+.thirty			{ width: 30%; }
+.twenty			{ width: 20%; }
+.ten			{ width: 10%; }
+
+/* grid spacing */
+.gw { 
+    margin-left: -1em; 
+    /* letter-spacing fix for inline-block grid elements borrowed from @csswizardry grids */
+    letter-spacing:-0.31em;
+}
+    .g { 
+        padding-left: 1em;         
+        display: inline-block;
+        vertical-align: top;
+        letter-spacing:normal;
+        /* reset the default floating behaviour on grid widths */
+        float: none;
+        /* border-box sizing in case you don't use a standard grid width */
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        -ms-box-sizing: border-box;
+        -o-box-sizing: border-box;
+        box-sizing: border-box;
+    }
+    
+    /* half-spacing grid */
+    .gw--h { margin-left: -0.5em; }
+        .gw--h .g { padding-left: 0.5em; }
+
+/* after grids so that you can apply it and it should kill/apply the float */
+.block-mid { margin-left: auto; margin-right: auto; display: block; float: none; }
+
+.pull-left, .fl, .float--left { float: left; }
+.pull-right, .fr, .float--right { float: right; }
+.pull-none, .killfloat { float: none; }
+
+.clear, .r-clear { clear: both; }
+.hide, .r-hide { display: none; }
+    .hide--important { display: none !important; } /* now I'm f'ing serious!! */
+.allcaps { text-transform: uppercase; }
+
+/* basic clearfix - comes in many flavours! */
+.clearfix:after, .fix:after, .group:after, .row:after, .gw:after, .media:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+/* responsive stuff.  snip here if you don't want to go down this rabbit hole */
+@media only screen and (min-width: $media--l) {  
+    /* (l) trigger classes */
+    .hide--screen-l { display: none; }
+    .show--screen-l, .r-block--screen-l { display: block; }
+    .block-mid--screen-l { margin-left: auto; margin-right: auto; display: block; float: none; }
+    .pull-left--screen-l, .fl--screen-l { float: left; }
+    .pull-right--screen-l, .fr--screen-l { float: right; }
+    .pull-none--screen-l, .killfloat--screen-l { float: none; }
+    
+    .whole--screen-l			{ width: 100%; }
+    .ninety--screen-l			{ width: 90%; }
+    .eighty--screen-l			{ width: 80%; }
+    .seventy--screen-l			{ width: 70%; }
+    .sixty--screen-l			{ width: 60%; }
+    .half--screen-l, .fifty--screen-l
+								{ width: 50%; }
+    .forty--screen-l         	{ width: 40%; }
+    .thirty--screen-l       	{ width: 30%; }
+    .quarter--screen-l     		{ width: 25%; }
+    .twenty--screen-l       	{ width: 20%; }
+    .ten--screen-l            	{ width: 10%; }
+}
+@media only screen and (min-width: $media--xl) { 
+    /* (xl) trigger classes */
+    .hide--screen-xl { display: none; }
+    .show--screen-xl, .r-block--screen-xl { display: block; }
+    .block-mid--screen-xl { margin-left: auto; margin-right: auto; display: block; float: none; }
+    .pull-left--screen-xl, .fl--screen-xl { float: left; }
+    .pull-right--screen-xl, .fr--screen-xl { float: right; }
+    .pull-none--screen-xl, .killfloat--screen-xl { float: none; }
+
+    .whole--screen-xl         	{ width: 100%; }
+    .ninety--screen-xl       	{ width: 90%; }
+    .eighty--screen-xl       	{ width: 80%; }
+    .seventy--screen-xl     	{ width: 70%; }
+    .sixty--screen-xl         	{ width: 60%; }
+    .half--screen-xl, .fifty--screen-xl
+								{ width: 50%; }
+    .forty--screen-xl         	{ width: 40%; }
+    .thirty--screen-xl       	{ width: 30%; }
+    .quarter--screen-xl     	{ width: 25%; }
+    .twenty--screen-xl       	{ width: 20%; }
+    .ten--screen-xl				{ width: 10%; }
+}
+
+@media only screen and (max-width: $media--m) {    
+    /* 'portrait mode' (m) trigger classes */
+    .port-half, .half--screen-m { width: 50%; float: left; clear: none; }    
+    
+    .block-mid--screen-m { margin-left: auto; margin-right: auto; display: block; float: none; }
+    .port-hide, .hide--screen-m { display: none; }
+    .port-block, .show--screen-m, .r-block--screen-m { display: block; }
+    .port-clear, .clear--screen-m, .r-clear--screen-m { clear: both; }
+    .port-killfloat, .port-pull-none, .port-float--none,
+    .pull-none--screen-m, .killfloat--screen-m { float: none; }    
+    
+    .whole--screen-m         	{ width: 100%; }
+    .ninety--screen-m       	{ width: 90%; }
+    .eighty--screen-m       	{ width: 80%; }
+    .seventy--screen-m     		{ width: 70%; }
+    .sixty--screen-m         	{ width: 60%; }
+    .half--screen-m, .fifty--screen-m
+								{ width: 50%; }
+    .forty--screen-m			{ width: 40%; }
+    .thirty--screen-m			{ width: 30%; }
+    .quarter--screen-m			{ width: 25%; }
+    .twenty--screen-m			{ width: 20%; }
+    .ten--screen-m              { width: 10%; }
+}
+@media only screen and (max-width: $media--s) {    
+    html { min-width: initial; }    
+    
+    /* death to floating columns on mobile! */
+    .whole, .half, .third, .twothird, .twothirds, .quarter, .threequarter, .threequarters, .sixth, .eighth, .ninety, .eighty, .seventy, .sixty, .fifty, .forty, .thirty, .twenty, .ten  { width: 100%; margin: 0 auto; }    
+        /* just in-case silly people apply the grids to images and it breaks things... */
+        img.half, img.third, img.twothird, img.quarter, img.threequarter, img.sixth { width: auto; }
+        .palm-half, .half--screen-s { width: 50%; float: left; clear: none; }
+
+    /* mobile-only (s) trigger classes */
+    .block-mid--screen-s { margin-left: auto; margin-right: auto; display: block; float: none; }    
+    .palm-hide, .hide--screen-s { display: none; }
+    .palm-block, .show--screen-s, .r-block--screen-s { display: block; }
+    .palm-clear, .clear--screen-s, .r-clear--screen-s { clear: both; }
+    .palm-killfloat, .palm-pull-none, .palm-float--none,
+    .killfloat-s, .pull-none--screen-s { float: none; }    
+    
+    .whole--screen-s			{ width: 100%; }
+    .ninety--screen-s			{ width: 90%; }
+    .eighty--screen-s			{ width: 80%; }
+    .seventy--screen-s			{ width: 70%; }
+    .sixty--screen-s			{ width: 60%; }
+    .half--screen-s, .fifty--screen-s
+								{ width: 50%; }
+    .forty--screen-s			{ width: 40%; }
+    .thirty--screen-s			{ width: 30%; }
+    .quarter--screen-s			{ width: 25%; }
+    .twenty--screen-s			{ width: 20%; }
+    .ten--screen-s              { width: 10%; }
+}
+@media only screen and (max-width: $media--xs) { 
+    /* (xs) trigger classes */
+    .half--screen-xs { width: 50%; float: left; clear: none; }
+    
+    .hide--screen-xs{ display: none; }
+    .show--screen-xs, .r-block--screen-xs { display: block; }
+    .clear--screen-xs, .r-clear--screen-xs { clear: both; }
+    .killfloat-xs, .pull-none--screen-xs { float: none; }    
+    
+    .whole--screen-xs       	{ width: 100%; }
+    .ninety--screen-xs      	{ width: 90%; }
+    .eighty--screen-xs      	{ width: 80%; }
+    .seventy--screen-xs     	{ width: 70%; }
+    .sixty--screen-xs        { width: 60%; }
+    .half--screen-xs, .fifty--screen-xs
+									{ width: 50%; }
+    .forty--screen-xs       	{ width: 40%; }
+    .thirty--creen-xs       { width: 30%; }
+    .quarter--screen-xs     	{ width: 25%; }
+    .twenty--screen-xs       { width: 20%; }
+    .ten--screen-xs			{ width: 10%; }
+}

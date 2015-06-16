@@ -1,0 +1,24 @@
+{
+  "name": "_ls",
+  "version": "0.0.1",
+  "authors": [
+    "Doug Brown <doug@duckduckgo.com>"
+  ],
+  "description": "Litestrap framework used by DuckDuckGo",
+  "main": "_litestrap.scss",
+  "keywords": [
+    "litestrap",
+    "duckduckgo",
+    "framework",
+    "scss"
+  ],
+  "license": "MIT",
+  "homepage": "https://duckduckgo.com/",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
