@@ -3,13 +3,13 @@
 // These provide extra functionality and styling,
 // but may not always be necessary depending on the project.
 
-@include 'layout/_rotate';
-@include 'layout/_spacing';
-@include 'layout/_text';
+@import 'layout/_rotate';
+@import 'layout/_spacing';
+@import 'layout/_text';
 
-@include 'objects/buttons';
-@include 'objects/circle';
-@include 'objects/code-blocks';
-@include 'objects/forms';
-@include 'objects/media';
-@include 'objects/tables';
+@import 'objects/buttons';
+@import 'objects/circle';
+@import 'objects/code-blocks';
+@import 'objects/forms';
+@import 'objects/media';
+@import 'objects/tables';
