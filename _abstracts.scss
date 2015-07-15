@@ -1,4 +1,46 @@
 /* 
+ *  _litestrap abstracts
+ *
+ * Abstracted objects for multi-purpose use
+ *
+ */
+
+/* makin' a circle.. */
+%circle {    
+    -moz-border-radius: 50%;
+	-webkit-border-radius: 50%;
+	border-radius: 50%;
+    /* set your own damn widths, you crazy kids */
+    /* protip: if the height != the width, you'll end up with an elipse. */
+} 
+.circle {
+	@extend %circle;
+} 
+
+/*
+    the media object
+    - http://www.stubbornella.org/content/2010/06/25/the-media-object-saves-hundreds-of-lines-of-code/
+*/
+.media {
+    display: block;
+}
+    .media__img {
+        float: left;
+        margin-right: 0.5em;
+    }
+    .media__img--rev {
+        float: right;
+        margin-left: 0.5em;
+    }
+        .media__img img,
+        .media__img--rev img {
+            display: block;
+        }
+    .media__body {
+        overflow: hidden;
+    }        
+ 
+/* 
 	faux tables for image/text display 
 	- the 'flag' object with a different name: 
 	   http://csswizardry.com/2013/05/the-flag-object/ 
