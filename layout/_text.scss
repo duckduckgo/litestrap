@@ -6,7 +6,7 @@
  */
 
 /* element styling */ 
-h1, h2, h3, h4, h5, h6, p, ul, ol, blockquote { padding-top: 0.5em; padding-bottom: 0.5em; } 
+h1, h2, h3, h4, h5, h6, p, ul, ol, blockquote { padding-top: $half-unit; padding-bottom: $half-unit; } 
  
 /* .t- is for text, .h- is for header :) */
  
@@ -45,24 +45,24 @@ small, .t-s             { font-size: $t-s; }
 @media only screen and (min-width: $media--l) { 
 	.h-xxl--screen-l, 
 	.t-xxxxl--screen-l,
-	.t-triple--screen-l	{ font-size: 3em; }
+	.t-triple--screen-l	{ font-size: $t-4xl; }
     .h-xl--screen-l, 
 	.t-xxxl--screen-l,
-	.t-double--screen-l	{ font-size: 2em; }
+	.t-double--screen-l	{ font-size: $t-3xl; }
 	.h-l--screen-l, 
-	.t-xxl--screen-l		{ font-size: 1.75em; }
+	.t-xxl--screen-l		{ font-size: $t-2xl; }
     .h-m--screen-l, 
 	.t-xl--screen-l,
-	.t-xl--screen-l		{ font-size: 1.5em; }
+	.t-xl--screen-l		{ font-size: $t-xl; }
 	.h-s--screen-l, 
-	.t-l--screen-l			{ font-size: 1.33em;}
+	.t-l--screen-l			{ font-size: $t-l;}
 	.h-xs--screen-l, 
-	.t-m--screen-l			{ font-size: 1.1667em; }
-	.t-s--screen-l			{ font-size: 0.9167em; }
-	.t-xs--screen-l			{ font-size: 0.8333em; }
+	.t-m--screen-l			{ font-size: $t-m; }
+	.t-s--screen-l			{ font-size: $t-s; }
+	.t-xs--screen-l			{ font-size: $t-xs; }
     .t-nat--screen-l 		{ font-size: 1rem; }
-    .t-half--screen-l 		{ font-size: 0.5em; }
-	.t-n--screen-l			{ font-size: 1em; }
+    .t-half--screen-l 		{ font-size: $t-5xs; }
+	.t-n--screen-l			{ font-size: $t-n; }
     
     .t-mid--screen-l, .t-center--screen-l { text-align: center; }
     .t-left--screen-l{ text-align: left; }
@@ -71,24 +71,24 @@ small, .t-s             { font-size: $t-s; }
 @media only screen and (min-width: $media--xl) { 
 	.h-xxl--screen-xl, 
 	.t-xxxxl--screen-xl,
-	.t-triple--screen-xl	{ font-size: 3em; }
+	.t-triple--screen-xl	{ font-size: $t-4xl; }
     .h-xl--screen-xl, 
 	.t-xxxl--screen-xl,
-	.t-double--screen-xl	{ font-size: 2em; }
+	.t-double--screen-xl	{ font-size: $t-3xl; }
 	.h-l--screen-xl, 
-	.t-xxl--screen-xl		{ font-size: 1.75em; }
+	.t-xxl--screen-xl		{ font-size: $t-2xl; }
     .h-m--screen-xl, 
 	.t-xl--screen-xl,
-	.t-xl--screen-xl		{ font-size: 1.5em; }
+	.t-xl--screen-xl		{ font-size: $t-xl; }
 	.h-s--screen-xl, 
-	.t-l--screen-xl		{ font-size: 1.33em;}
+	.t-l--screen-xl		{ font-size: $t-l;}
 	.h-xs--screen-xl, 
-	.t-m--screen-xl		{ font-size: 1.1667em; }
-	.t-s--screen-xl			{ font-size: 0.9167em; }
-	.t-xs--screen-xl		{ font-size: 0.8333em; }
+	.t-m--screen-xl		{ font-size: $t-m; }
+	.t-s--screen-xl			{ font-size: $t-s; }
+	.t-xs--screen-xl		{ font-size: $t-xs; }
     .t-nat--screen-xl 		{ font-size: 1rem; }
-    .t-half--screen-xl 	{ font-size: 0.5em; }
-	.t-n--screen-xl			{ font-size: 1em; }
+    .t-half--screen-xl 	{ font-size: $t-5xs; }
+	.t-n--screen-xl			{ font-size: $t-n; }
     
     .t-mid--screen-xl, .t-center--screen-xl { text-align: center; }
     .t-left--screen-xl { text-align: left; }
@@ -97,24 +97,24 @@ small, .t-s             { font-size: $t-s; }
 @media only screen and (max-width: $media--m) { 
     .h-xxl--screen-m, 
 	.t-xxxxl--screen-m,
-	.t-triple--screen-m	{ font-size: 3em; }
+	.t-triple--screen-m	{ font-size: $t-4xl; }
     .h-xl--screen-m, 
 	.t-xxxl--screen-m,
-	.t-double--screen-m	{ font-size: 2em; }
+	.t-double--screen-m	{ font-size: $t-3xl; }
 	.h-l--screen-m, 
-	.t-xxl--screen-m		{ font-size: 1.75em; }
+	.t-xxl--screen-m		{ font-size: $t-2xl; }
     .h-m--screen-m, 
 	.t-xl--screen-m,
-	.t-xl--screen-m		{ font-size: 1.5em; }
+	.t-xl--screen-m		{ font-size: $t-xl; }
 	.h-s--screen-m, 
-	.t-l--screen-m			{ font-size: 1.33em;}
+	.t-l--screen-m			{ font-size: $t-l;}
 	.h-xs--screen-m, 
-	.t-m--screen-m			{ font-size: 1.1667em; }
-	.t-s--screen-m			{ font-size: 0.9167em; }
-	.t-xs--screen-m			{ font-size: 0.8333em; }
+	.t-m--screen-m			{ font-size: $t-m; }
+	.t-s--screen-m			{ font-size: $t-s; }
+	.t-xs--screen-m			{ font-size: $t-xs; }
     .t-nat--screen-m 		{ font-size: 1rem; }
-    .t-half--screen-m 		{ font-size: 0.5em; }
-	.t-n--screen-m			{ font-size: 1em; }
+    .t-half--screen-m 		{ font-size: $t-5xs; }
+	.t-n--screen-m			{ font-size: $t-n; }
     
     .t-mid--screen-m, .t-center--screen-m { text-align: center; }
     .t-left--screen-m { text-align: left; }
@@ -124,24 +124,24 @@ small, .t-s             { font-size: $t-s; }
 @media only screen and (max-width: $media--s) {   
 	.h-xxl--screen-s, 
 	.t-xxxxl--screen-s,
-	.t-triple--screen-s	{ font-size: 3em; }
+	.t-triple--screen-s	{ font-size: $t-4xl; }
     .h-xl--screen-s, 
 	.t-xxxl--screen-s,
-	.t-double--screen-s	{ font-size: 2em; }
+	.t-double--screen-s	{ font-size: $t-3xl; }
 	.h-l--screen-s, 
-	.t-xxl--screen-s		{ font-size: 1.75em; }
+	.t-xxl--screen-s		{ font-size: $t-2xl; }
     .h-m--screen-s, 
 	.t-xl--screen-s,
-	.t-xl--screen-s		{ font-size: 1.5em; }
+	.t-xl--screen-s		{ font-size: $t-xl; }
 	.h-s--screen-s, 
-	.t-l--screen-s			{ font-size: 1.33em;}
+	.t-l--screen-s			{ font-size: $t-l;}
 	.h-xs--screen-s, 
-	.t-m--screen-s			{ font-size: 1.1667em; }
-	.t-s--screen-s			{ font-size: 0.9167em; }
-	.t-xs--screen-s			{ font-size: 0.8333em; }
+	.t-m--screen-s			{ font-size: $t-m; }
+	.t-s--screen-s			{ font-size: $t-s; }
+	.t-xs--screen-s			{ font-size: $t-xs; }
     .t-nat--screen-s 		{ font-size: 1rem; }
-    .t-half--screen-s 		{ font-size: 0.5em; }
-	.t-n--screen-s			{ font-size: 1em; }
+    .t-half--screen-s 		{ font-size: $t-5xs; }
+	.t-n--screen-s			{ font-size: $t-n; }
     
     .t-mid--screen-s, .t-center--screen-s { text-align: center; }
     .t-left--screen-s { text-align: left; }
@@ -151,24 +151,24 @@ small, .t-s             { font-size: $t-s; }
 @media only screen and (max-width: $media--xs) { 
 	.h-xxl--screen-xs, 
 	.t-xxxxl--screen-xs,
-	.t-triple--screen-xs	{ font-size: 3em; }
+	.t-triple--screen-xs	{ font-size: $t-4xl; }
     .h-xl--screen-xs, 
 	.t-xxxl--screen-xs,
-	.t-double--screen-xs	{ font-size: 2em; }
+	.t-double--screen-xs	{ font-size: $t-3xl; }
 	.h-l--screen-xs, 
-	.t-xxl--screen-xs		{ font-size: 1.75em; }
+	.t-xxl--screen-xs		{ font-size: $t-2xl; }
     .h-m--screen-xs, 
 	.t-xl--screen-xs,
-	.t-xl--screen-xs		{ font-size: 1.5em; }
+	.t-xl--screen-xs		{ font-size: $t-xl; }
 	.h-s--screen-xs, 
-	.t-l--screen-xs			{ font-size: 1.33em;}
+	.t-l--screen-xs			{ font-size: $t-l;}
 	.h-xs--screen-xs, 
-	.t-m--screen-xs			{ font-size: 1.1667em; }
-	.t-s--screen-xs			{ font-size: 0.9167em; }
-	.t-xs--screen-xs		{ font-size: 0.8333em; }
+	.t-m--screen-xs			{ font-size: $t-m; }
+	.t-s--screen-xs			{ font-size: $t-s; }
+	.t-xs--screen-xs		{ font-size: $t-xs; }
     .t-nat--screen-xs 		{ font-size: 1rem; }
-    .t-half--screen-xs 		{ font-size: 0.5em; }
-	.t-n--screen-xs			{ font-size: 1em; }
+    .t-half--screen-xs 		{ font-size: $t-5xs; }
+	.t-n--screen-xs			{ font-size: $t-n; }
     
     .t-mid--screen-xs, .t-center--screen-xs { text-align: center; }
     .t-left--screen-xs { text-align: left; }
