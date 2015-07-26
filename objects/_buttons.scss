@@ -1,78 +1,82 @@
-/* 
- *  _litestrap buttons
- *
- * Everyone loves buttons!  
- * Also includes 'tags' for button styling without being clickable.
- *
- */
- 
-.button, .butt /* lol */, .btn, .tag, %btn, %btn--base {
-    /* standard display types to make them behave correctly */
-    display: inline-block; 
+// _litestrap buttons
+//
+// Everyone loves buttons!
+// NOTE: Also includes 'tags' for button styling without being clickable.
+
+
+.button, .butt, .btn, .tag, %btn, %btn--base {
+    // Standard display types to make them behave correctly
+    display: inline-block;
     vertical-align: middle;
-    white-space:nowrap;
-    text-align: center;     
+    white-space: nowrap;
+    text-align: center;
     position: relative;
     text-decoration: none;
-    
-    /* normalize sizing */
+
+    // Normalize sizing
     margin-top: 0;
-	margin-bottom: 0;
+    margin-bottom: 0;
     padding: 0 1em;
     line-height: 2.5;
     
-    /* basic styling to make them look nice */
+    // Basic styling to make them look nice
     border: 1px solid #babec9;
-    text-shadow: 0 1px 1px rgba(255,255,255,0.1);
-	background-color: #f8f8f8;	
-	color: #474747;	
-    
-    /* round corners */
+    text-shadow: 0 1px 1px rgba(255, 255, 255, 0.1);
+    background-color: #f8f8f8;
+    color: #474747;
+
+    // Round corners
     -moz-border-radius: 0.25em;
-	-webkit-border-radius: 0.25em;
-	border-radius: 0.25em;
-    
-    /* this is important to prevent weirdness if you assign a width */
+    -webkit-border-radius: 0.25em;
+    border-radius: 0.25em;
+
+    // This is important to prevent weirdness if you assign a width
     -webkit-box-sizing: content-box;
-	-moz-box-sizing: content-box;
-	-ms-box-sizing: content-box;
-	-o-box-sizing: content-box;
-	box-sizing: content-box;
-    
-    /* users love to click buttons, but double-clicking can select text. stop that */
+    -moz-box-sizing: content-box;
+    -ms-box-sizing: content-box;
+    -o-box-sizing: content-box;
+    box-sizing: content-box;
+
+    // Users love to click buttons, but double-clicking can select text. Stop that
     -webkit-user-select: none;
     -khtml-user-select: none;
     -moz-user-select: -moz-none;
     -ms-user-select: none;
     user-select: none;
 }
-    /* .tag gets left out in the cold on this one... */
-    .button, .butt, .btn, %btn, %btn--base { cursor: pointer; }
-    .button:hover, .butt:hover /* it never gets old... */, .btn:hover, %btn:hover {
-		text-decoration: none; /* just making sure... */
-        background-color: #fff;
-	}	
-    .button:active, .butt:active, .btn:active, %btn:active  {	background-color: #eee;	} /* if you click me, do I not bleed? */
-    .button:active, .button:focus { outline: none; }
-    
-/* 
- * I'm now going to create some variatsions for the .btn element.  
- * I leave .butt (and .button) in your charge to do as you will with them. (haha.. butt)
- * You can actually add these modifiers to any of the elements, so you could have:
- * <a class="butt  btn--xl  btn--dark">Butts!</a> as an example.
- */
 
-/* styles */ 
-.btn--full, .btn--fill {
-    display: block;
-} 
-.btn--pill {
-    -moz-border-radius: 5em;
-	-webkit-border-radius: 5em;
-	border-radius: 5em;
+// .tag gets left out in the cold on this one...
+.button, .butt, .btn, %btn, %btn--base {
+    cursor: pointer;
+}
+.button:hover, .butt:hover, .btn:hover, %btn:hover {
+    text-decoration: none;
+    // Just making sure...
+    background-color: #fff;
+}
+.button:active, .butt:active, .btn:active, %btn:active {
+    background-color: #eee;
 }
 
-/* font-sizes */ 
+// If you click me, do I not bleed?
+.button:active, .button:focus {
+    outline: none;
+}
+
+// I'm now going to create some variations for the .btn element.
+// I leave .butt (and .button) in your charge to do as you will with them.
+// You can actually add these modifiers to any of the elements, so you could have:
+// <a class="butt  btn--xl  btn--dark">Butts!</a> as an example.
+.btn--full, .btn--fill {
+    display: block;
+}
+.btn--pill {
+    -moz-border-radius: 5em;
+    -webkit-border-radius: 5em;
+    border-radius: 5em;
+}
+
+// Font sizes
 .btn--xxl {
     font-size: 5em;
 }
@@ -92,61 +96,65 @@
     font-size: 0.5em;
 }
 
-/* heights */
-.btn--xtall { line-height: 4; }
-.btn--tall { line-height: 3; }
-.btn--short { line-height: 1.5; }
-.btn--nat { line-height: inherit; }
+// Heights
+.btn--xtall {
+    line-height: 4;
+}
+.btn--tall {
+    line-height: 3;
+}
+.btn--short {
+    line-height: 1.5;
+}
+.btn--nat {
+    line-height: inherit;
+}
 
-/* colors 
- * well, just dark - you should probably define your own colors 
- * remember to include a :hover and :active state :)
- */
+// Colors
+// NOTE: Well, just dark - you should probably define your own colors
+// NOTE: Remember to include a :hover and :active state :)
 .btn--dark, .tag--dark {
     border-color: #242424;
-    text-shadow: 0 -1px 1px rgba(0,0,0,0.9);
-	background-color: #474747;	
-	color: #f8f8f8;	
+    text-shadow: 0 -1px 1px rgba(0, 0, 0, 0.9);
+    background-color: #474747;
+    color: #f8f8f8;
 }
-    .btn--dark:hover {
-        background-color: #383838;
-    }
-    .btn--dark:active {
-        background-color: #292929;
-    }
-    
-/* 
-    button groups 
-    either .btn--grp on each item, 
-    or .btn-grp on the parent element, and it looks for .btn children
-*/
+.btn--dark:hover {
+    background-color: #383838;
+}
+.btn--dark:active {
+    background-color: #292929;
+}
+
+// Button groups
+// NOTE: Either .btn--grp on each item or .btn-grp on the parent element, and it looks for .btn children
 .btn--grp, .btn-grp > .btn {
     margin-left: -0.35em;
 }
-    .btn--grp, .btn-grp > .btn {
-        -webkit-border-radius: 0;
-        -moz-border-radius: 0;
-        border-radius: 0;
-    }
-    .btn--grp:first-child, .btn-grp > .btn:first-child, .btn--grp--first {
-        margin-left: 0;
-         -moz-border-radius-bottomleft: 0.25em;
-        -webkit-border-bottom-left-radius: 0.25em;
-        border-bottom-left-radius: 0.25em;
-        -moz-border-radius-topleft: 0.25em;
-        -webkit-border-top-left-radius: 0.25em;
-        border-top-left-radius: 0.25em;
-    }
-    .btn--grp:last-child, .btn-grp > .btn:last-child, .btn--grp--last {
-        -moz-border-radius-topright: 0.25em;
-        -webkit-border-top-right-radius: 0.25em;
-        border-top-right-radius: 0.25em;
-        -moz-border-radius-bottomright: 0.25em;
-        -webkit-border-bottom-right-radius: 0.25em;
-        border-bottom-right-radius: 0.25em;
-    }
-	.btn--grp.btn--grp--fakefirst {
-        -webkit-border-radius: 0;
-        -moz-border-radius: 0;
-        border-radius: 0;
-    }
+.btn--grp, .btn-grp > .btn {
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+}
+.btn--grp:first-child, .btn-grp > .btn:first-child, .btn--grp--first {
+    margin-left: 0;
+    -moz-border-radius-bottomleft: 0.25em;
+    -webkit-border-bottom-left-radius: 0.25em;
+    border-bottom-left-radius: 0.25em;
+    -moz-border-radius-topleft: 0.25em;
+    -webkit-border-top-left-radius: 0.25em;
+    border-top-left-radius: 0.25em;
+}
+.btn--grp:last-child, .btn-grp > .btn:last-child, .btn--grp--last {
+    -moz-border-radius-topright: 0.25em;
+    -webkit-border-top-right-radius: 0.25em;
+    border-top-right-radius: 0.25em;
+    -moz-border-radius-bottomright: 0.25em;
+    -webkit-border-bottom-right-radius: 0.25em;
+    border-bottom-right-radius: 0.25em;
+}
+.btn--grp.btn--grp--fakefirst {
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+}

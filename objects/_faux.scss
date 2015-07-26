@@ -1,55 +1,44 @@
-/* 
-	faux tables for image/text display 
-	- the 'flag' object with a different name: 
-	   http://csswizardry.com/2013/05/the-flag-object/ 
-*/
+// _litestrap faux
+//
+// Faux tables for image/text display - the 'flag' object with a different name:
+// NOTE: http://csswizardry.com/2013/05/the-flag-object
+
+
 .faux {
     display: table;
     width: 100%;
 }
-.faux--mid { text-align: center; }
-
-    .faux__image,
-    .faux__img,
-    .faux__body {
-        display: table-cell;
-        vertical-align: middle;
-	}
-        .faux--top .faux__image,
-        .faux--top .faux__img,
-		.faux--top  .faux__body {
-            vertical-align: top;
-        }
-
-        .faux--bottom .faux__image, 
-        .faux--bottom .faux__img, 
-		.faux--bottom  .faux__body {
-            vertical-align: bottom;
-        }
-        .faux--mid .faux__image, 
-        .faux--mid .faux__img, 
-        .faux--mid .faux__body {
-            display: inline-table;
-        }
-  
-    .faux__image, .faux__img {
-        padding-right: 0.5em;
-	}
-        .faux__image > img, .faux__img > img {
-            display: block;
-            max-width: none;
-        }
-
-        .faux--rev .faux__image,
-        .faux--rev .faux__img {
-            padding-right: 0;
-            padding-left: 0.5em;
-        }
-
-    .faux__body {
-        width: 100%;
-    }
-        .faux--mid .faux__body {
-            width: auto;
-            text-align: left;
-        }
+.faux--mid {
+    text-align: center;
+}
+.faux__image, .faux__img, .faux__body {
+    display: table-cell;
+    vertical-align: middle;
+}
+.faux--top .faux__image, .faux--top .faux__img, .faux--top .faux__body {
+    vertical-align: top;
+}
+.faux--bottom .faux__image, .faux--bottom .faux__img, .faux--bottom .faux__body {
+    vertical-align: bottom;
+}
+.faux--mid .faux__image, .faux--mid .faux__img, .faux--mid .faux__body {
+    display: inline-table;
+}
+.faux__image, .faux__img {
+    padding-right: 0.5em;
+}
+.faux__image > img, .faux__img > img {
+    display: block;
+    max-width: none;
+}
+.faux--rev .faux__image, .faux--rev .faux__img {
+    padding-right: 0;
+    padding-left: 0.5em;
+}
+.faux__body {
+    width: 100%;
+}
+.faux--mid .faux__body {
+    width: auto;
+    text-align: left;
+}
