@@ -1,54 +1,52 @@
-/* 
- *  _litestrap fancy
- *
- * Fancy Styling (Because sometimes we're all a bit lazy and just need some default stuff)
- *
- */
+// _litestrap code blocks
+//
+// Fancy Styling (Because sometimes we're all a bit lazy and just need some
+// default stuff)
+
 
 .round {
     -moz-border-radius: 0.25em;
-	-webkit-border-radius: 0.25em;
+    -webkit-border-radius: 0.25em;
     border-radius: 0.25em;
-} 
-
-pre, tt, code { 
-	font-family: Consolas, Menlo, Monaco, monospace;
+}
+pre, tt, code {
+    font-family: Consolas, Menlo, Monaco, monospace;
     color: #fafafa;
-	background: #333;
+    background: #333;
     -moz-border-radius: 0.25em;
-	-webkit-border-radius: 0.25em;
+    -webkit-border-radius: 0.25em;
     border-radius: 0.25em;
-	background-clip: padding-box;
-	//-webkit-box-shadow: inset 1px 1px 2px rgba(0,0,0,0.5);
+    background-clip: padding-box;
+    //-webkit-box-shadow: inset 1px 1px 2px rgba(0,0,0,0.5);
     //box-shadow: inset 1px 1px 2px rgba(0,0,0,0.5);
-	//text-shadow: 0 -1px 0 #000;
+    //text-shadow: 0 -1px 0 #000;
 }
-tt { padding: 0 3px 1px; }
-
-pre {	
-	margin: 0 0.5em 1em 0; 
-	overflow: auto;	
-	padding: 1em;		    
-	-moz-tab-size: 1;
-	-o-tab-size: 1;
-	tab-size: 1;
-	-ms-word-break: normal;
-	word-break: normal;
-	-webkit-hyphens: none;
-	-moz-hyphens: none;
-	-ms-hyphens: none;
-	hyphens: none;
-	position: relative;
-	display: block;
-	max-width: 100%;
-	white-space: pre-wrap;
-	white-space: -moz-pre-wrap;
-	white-space: -pre-wrap;
-	white-space: -o-pre-wrap;
+tt {
+    padding: 0 3px 1px;
 }
-
+pre {
+    margin: 0 0.5em 1em 0;
+    overflow: auto;
+    padding: 1em;
+    -moz-tab-size: 1;
+    -o-tab-size: 1;
+    tab-size: 1;
+    -ms-word-break: normal;
+    word-break: normal;
+    -webkit-hyphens: none;
+    -moz-hyphens: none;
+    -ms-hyphens: none;
+    hyphens: none;
+    position: relative;
+    display: block;
+    max-width: 100%;
+    white-space: pre-wrap;
+    white-space: -moz-pre-wrap;
+    white-space: -pre-wrap;
+    white-space: -o-pre-wrap;
+}
 pre code {
-	background: none; 
-	white-space: pre;
-	overflow: hidden;
+    background: none;
+    white-space: pre;
+    overflow: hidden;
 }

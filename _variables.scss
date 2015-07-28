@@ -1,0 +1,41 @@
+// _litestrap variables
+//
+// Default variables that you can use as-is or change as needed
+
+
+// Media query breakpoints
+//
+// Use ems or px - up to you
+$media--xl: 1440px;
+$media--l: 1079px;
+$media--m: 864px;
+$media--s: 634px;
+$media--xs: 425px;
+
+// Text sizes
+//
+// Follows a scale of some sort
+$t-4xl: 3em;
+$t-3xl: 2em;
+$t-2xl: 1.75em;
+$t-xl: 1.5em;
+$t-l: 1.33em;
+$t-m: 1.1667em;
+$t-n: 1em;
+$t-s: 0.9176em;
+$t-xs: 0.8333em;
+$t-2xs: 0.75em;
+$t-3xs: 0.66em;
+$t-4xs: 0.5833em;
+$t-5xs: 0.5em;
+
+// Spacing units
+//
+// Allows you to use predictable values for margin/padding
+$base-unit: 1em;
+$three-quarter-unit: $base-unit * 0.75;
+$half-unit: $base-unit / 2;
+$quarter-unit: $base-unit / 4;
+$double-unit: $base-unit * 2;
+$big-unit: $base-unit * 1.25;
+$small-unit: $base-unit / 1.25;

@@ -1,11 +1,14 @@
-/* makin' a circle.. */
-%circle {    
+// _litestrap circle
+//
+// NOTE: Set your own damn widths, you crazy kids. If the height != the width,
+// you'll end up with an elipse.
+
+
+%circle {
     -moz-border-radius: 50%;
-	-webkit-border-radius: 50%;
-	border-radius: 50%;
-    /* set your own damn widths, you crazy kids */
-    /* protip: if the height != the width, you'll end up with an elipse. */
-} 
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+}
 .circle {
-	@extend %circle;
-} 
+    @extend %circle;
+}
