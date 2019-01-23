@@ -27,9 +27,16 @@
     cursor: pointer;
 
     // Round corners
-    -moz-border-radius: 4px;
-    -webkit-border-radius: 4px;
-    border-radius: 4px;
+    -moz-border-radius: 0.25em;
+    -webkit-border-radius: 0.25em;
+    border-radius: 0.25em;
+
+    .is-cssexp {
+        -moz-border-radius: 4px;
+        -webkit-border-radius: 4px;
+        border-radius: 4px;
+    }
+
 
     // This is important to prevent weirdness if you assign a width
     -webkit-box-sizing: content-box;
